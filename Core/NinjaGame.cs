@@ -100,10 +100,5 @@
                 this.currentPlayer.Stamina += effect.Stamina;
             }
         }
-
-        protected void OnSpecialVegetableEaten(object sender, EventArgs e)
-        {
-            Console.WriteLine("KUR");
-        }
     }
 }

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5DD9F6B-0E8F-4FEF-A3C8-EEF16742800E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VegetableNinja</RootNamespace>
+    <AssemblyName>VegetableNinja</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\InputArrowKeyReader.cs" />
+    <Compile Include="Controls\IO\StandardOutput.cs" />
+    <Compile Include="Controls\Key.cs" />
+    <Compile Include="Controls\IO\StandardInput.cs" />
+    <Compile Include="Core\Grid\GridDirection.cs" />
+    <Compile Include="Core\Grid\Ninja\NinjaGrid.cs" />
+    <Compile Include="Core\Grid\Ninja\Position.cs" />
+    <Compile Include="Core\NinjaGame.cs" />
+    <Compile Include="GameObjects\Players\FightPosition.cs" />
+    <Compile Include="GameObjects\Players\Player.cs" />
+    <Compile Include="GameObjects\Players\PlayerInteractionEffect.cs" />
+    <Compile Include="GameObjects\Vegetables\Royal.cs" />
+    <Compile Include="GameObjects\Vegetables\Mushroom.cs" />
+    <Compile Include="GameObjects\Vegetables\CherryBerry.cs" />
+    <Compile Include="GameObjects\Vegetables\Broccoli.cs" />
+    <Compile Include="GameObjects\Vegetables\Asparagus.cs" />
+    <Compile Include="GameObjects\Vegetables\VegetableInteractionEffect.cs" />
+    <Compile Include="GameObjects\Vegetables\Vegetable.cs" />
+    <Compile Include="Interfaces\IFightEffect.cs" />
+    <Compile Include="Interfaces\IGame.cs" />
+    <Compile Include="Interfaces\IInput.cs" />
+    <Compile Include="Interfaces\IAggressor.cs" />
+    <Compile Include="Interfaces\IInteractable.cs" />
+    <Compile Include="Interfaces\IInteractionEffect.cs" />
+    <Compile Include="Interfaces\IKeyReader.cs" />
+    <Compile Include="Interfaces\IOutput.cs" />
+    <Compile Include="Core\Grid\IGrid.cs" />
+    <Compile Include="GameObjects\Players\IPlayer.cs" />
+    <Compile Include="Interfaces\IVegetable.cs" />
+    <Compile Include="Launcher.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
